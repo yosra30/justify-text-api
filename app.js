@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.text({ limit: '50mb' }));
 
 app.use(cookieParser());
+app.use(express.static(__dirname + '/public'));
 
 app.use('/', require('./routes/index.route'));
 
